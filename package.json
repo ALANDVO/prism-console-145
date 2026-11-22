@@ -1,0 +1,14 @@
+{
+  "name": "prism-console-145",
+  "version": "0.1.0",
+  "description": "The PHP Interpreter - A PHP code analysis and execution tool",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "node app/index.js",
+    "test": "node tests/index.js"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "commander": "^8.3.0"
+  }
+}

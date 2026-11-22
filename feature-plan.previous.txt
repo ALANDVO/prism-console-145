@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "current_feature": "array_unique_bug_fix",
+  "features": [
+    {
+      "id": "array_unique_bug_fix",
+      "title": "Fix array_unique() with SORT_REGULAR to handle numeric/non-numeric string mixing",
+      "status": "done",
+      "acceptance": [
+        "array_unique($array, SORT_REGULAR) returns correct unique values without duplicates",
+        "Numeric string '5' and non-numeric '3A' are properly distinguished",
+        "Test case: ['5', '10', '5', '3A', '5', '5'] with SORT_REGULAR returns [5, 10, 3A]",
+        "Test case: ['10', '2', '10', 'a'] with SORT_REGULAR returns [10, 2, a]"
+      ],
+      "implementation": [
+        "app/array_unique_fix.js - implements corrected array_unique logic"
+      ],
+      "tests": [
+        "tests/array_unique_test.js - test suite for the fix"
+      ]
+    }
+  ]
+}
